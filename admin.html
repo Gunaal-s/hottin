@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hot Tin — Admin Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.utr{display:inline-block;margin-top:7px;color:#d8d8d8}.utr b{color:#ff6565;letter-spacing:.03em}
+.admin-page{max-width:1180px;margin:auto;padding:45px 22px 100px}.admin-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}.admin-head h1{font:700 50px "Space Grotesk";margin:12px 0}.admin-head p{color:#888}.back{border:1px solid #333;padding:11px 15px;border-radius:10px;color:#aaa;font-size:12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{background:#121315;border:1px solid #292a2d;border-radius:16px;padding:22px}.stat small{color:#777}.stat b{display:block;font:700 34px "Space Grotesk";margin-top:10px}.stat b.red{color:#f33}.orders{margin-top:30px;background:#111214;border:1px solid #292a2d;border-radius:18px;overflow:hidden}.orders-title{padding:22px;display:flex;justify-content:space-between;border-bottom:1px solid #292a2d}.orders-title b{font-size:15px}.clear{background:none;border:1px solid #432326;color:#f66;border-radius:8px;padding:8px 12px;cursor:pointer}.order{display:grid;grid-template-columns:1fr 1.4fr .7fr .7fr;gap:20px;padding:20px 22px;border-bottom:1px solid #202125;align-items:center}.order:last-child{border:0}.customer b,.customer small{display:block}.customer small,.address,.date{color:#777;font-size:11px;line-height:1.5}.amount{font-weight:800;color:#f44}.status{justify-self:start;background:#291011;color:#ff7070;padding:7px 9px;border-radius:20px;font-size:10px;font-weight:800}.empty{text-align:center;padding:70px;color:#666}.refresh{background:#f33;color:#fff;border:0;border-radius:9px;padding:9px 12px;font-weight:700;cursor:pointer}
+@media(max-width:750px){.stats{grid-template-columns:1fr}.order{grid-template-columns:1fr 1fr}.admin-head{align-items:start;gap:20px}.admin-head h1{font-size:38px}}
+</style></head>
+<body>
+<header class="nav"><a class="brand" href="index.html"><span class="brand-mark">HT</span><span>HOT <b>TIN</b></span></a><nav><a href="index.html">Customer site</a><a class="admin-link" href="admin.html">Admin Dashboard</a></nav></header>
+<main class="admin-page">
+<div class="admin-head"><div><span class="eyebrow">HOT TIN • CODE CRACKERS</span><h1>Order dashboard</h1><p>Incoming Food Heater orders appear here with amount paid and UTR for admin verification.</p></div><button class="refresh" onclick="render()">Refresh</button></div>
+<div class="stats"><div class="stat"><small>TOTAL ORDERS</small><b id="total">0</b></div><div class="stat"><small>PAID ORDERS</small><b id="paid" class="red">0</b></div><div class="stat"><small>AMOUNT PAID</small><b id="revenue">₹0</b></div></div>
+<section class="orders"><div class="orders-title"><b>Recent orders</b><button class="clear" onclick="clearOrders()">Clear demo data</button></div><div id="orderList"></div></section>
+</main>
+<script>
+function render(){
+ const orders=JSON.parse(localStorage.getItem("hotTinOrders")||"[]");
+ document.getElementById("total").textContent=orders.length;
+ document.getElementById("paid").textContent=orders.length;
+ document.getElementById("revenue").textContent="₹"+orders.reduce((s,o)=>s+Number(o.amount||0),0).toLocaleString("en-IN");
+ const box=document.getElementById("orderList");
+ if(!orders.length){box.innerHTML='<div class="empty">No orders yet.<br>Orders placed on the customer page will appear here.</div>';return;}
+ box.innerHTML=orders.map(o=>`<div class="order">
+ <div class="customer"><b>${safe(o.name)}</b><small>${safe(o.phone)} • ${safe(o.id)}</small></div>
+ <div class="address">${safe(o.address)}<br><span class="utr">UTR: <b>${safe(o.utr || "Not provided")}</b></span></div>
+ <div><div class="amount">Paid ₹${o.amountPaid ?? o.amount}</div><div class="date">${safe(o.createdAt)}</div></div>
+ <div class="status">${safe(o.status)}</div></div>`).join("");
+}
+function safe(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+function clearOrders(){if(confirm("Clear all demo orders?")){localStorage.removeItem("hotTinOrders");render();}}
+render();
+</script></body></html>

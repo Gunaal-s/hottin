@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Tin — Food Heater</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-1"></div><div class="ambient ambient-2"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home"><span class="brand-mark">HT</span><span>HOT <b>TIN</b></span></a>
+    <nav>
+      <a href="#features">Benefits</a>
+      <a href="#product">Product</a>
+      <a href="#how">How it works</a>
+      <a class="admin-link" href="admin.html">Admin</a>
+    </nav>
+    <button class="nav-cta" onclick="scrollToOrder()">Order ₹599</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> SMART FOOD HEATING • BY CODE CRACKERS</div>
+        <h1>Warm food.<br><em>Right temperature.</em></h1>
+        <p class="hero-text">Meet <strong>Food Heater</strong> by <strong>Hot Tin</strong> — a simple, modern way to keep your meals warm and ready whenever you are.</p>
+        <div class="price-row">
+          <div><span class="old-price">₹1,200</span><span class="sale-price">₹599</span></div>
+          <span class="save-badge">50% OFF</span>
+        </div>
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="scrollToOrder()">Get Food Heater <span>→</span></button>
+          <a class="ghost-btn" href="#features">Explore benefits</a>
+        </div>
+        <div class="trust-row"><span>✓ Simple</span><span>✓ Temperature care</span><span>✓ Compact</span></div>
+      </div>
+
+      <div class="hero-product reveal">
+        <div class="product-glow"></div>
+        <div class="heater">
+          <div class="heater-top"><div class="heater-logo">HOT<br><b>TIN</b></div><div class="heat-lines">≈ ≈ ≈</div></div>
+          <div class="heater-lid"></div>
+          <div class="heater-body"><div class="display">WARM</div><div class="led"></div></div>
+          <div class="heater-base"></div>
+        </div>
+        <div class="floating-card card-temp"><span>🌡</span><div><b>Stable heat</b><small>Maintains temperature</small></div></div>
+        <div class="floating-card card-ready"><span>✓</span><div><b>Meal ready</b><small>Warm when you need it</small></div></div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-heading reveal"><span class="eyebrow">WHY HOT TIN</span><h2>Small box.<br><span>Big comfort.</span></h2><p>Designed to make everyday meals easier, warmer and more convenient.</p></div>
+      <div class="feature-grid">
+        <article class="feature reveal"><div class="icon">🌡️</div><h3>Maintains same temperature</h3><p>Helps keep your food at a comfortable, consistent serving temperature.</p></article>
+        <article class="feature reveal"><div class="icon">🔥</div><h3>Warm food, whenever</h3><p>Enjoy your meal warm instead of letting it sit cold while you work or study.</p></article>
+        <article class="feature reveal"><div class="icon">🧊</div><h3>Cool to handle</h3><p>A clean, compact design made for simple everyday handling and storage.</p></article>
+        <article class="feature reveal"><div class="icon">⚡</div><h3>Simple operation</h3><p>No complicated controls — place your meal, power it and let Hot Tin do the work.</p></article>
+      </div>
+    </section>
+
+    <section id="product" class="product-section">
+      <div class="product-info reveal">
+        <span class="eyebrow">THE HOT TIN FOOD HEATER</span>
+        <h2>Made for your<br><span>everyday meal.</span></h2>
+        <p>Whether you're at college, in the office or working from home, Hot Tin keeps your food ready for the moment you are.</p>
+        <ul class="check-list"><li>Temperature-maintaining heating system</li><li>Minimal black & red design</li><li>Easy-to-use food compartment</li><li>Built for everyday convenience</li></ul>
+      </div>
+      <div class="spec-card reveal">
+        <div class="spec-top"><span>HOT TIN</span><span>01</span></div>
+        <div class="mini-heater"><div class="mini-lid"></div><div class="mini-box"><div class="mini-screen">HOT</div></div></div>
+        <div class="spec-bottom"><div><small>ORIGINAL</small><b>FOOD HEATER</b></div><strong>₹599</strong></div>
+      </div>
+    </section>
+
+    <section id="how" class="section how-section">
+      <div class="section-heading reveal"><span class="eyebrow">3 EASY STEPS</span><h2>Heat. Wait.<br><span>Enjoy.</span></h2></div>
+      <div class="steps">
+        <div class="step reveal"><b>01</b><div class="step-line"></div><h3>Place your food</h3><p>Put your meal safely inside the heater compartment.</p></div>
+        <div class="step reveal"><b>02</b><div class="step-line"></div><h3>Start heating</h3><p>Turn on the heater and let it maintain a comfortable temperature.</p></div>
+        <div class="step reveal"><b>03</b><div class="step-line"></div><h3>Enjoy your meal</h3><p>Your warm meal is ready when you are.</p></div>
+      </div>
+    </section>
+
+    <section id="order" class="order-section">
+      <div class="order-card reveal">
+        <div class="order-copy"><span class="eyebrow">LIMITED INTRO PRICE</span><h2>Food Heater<br><span>₹599</span></h2><p>Regular price <s>₹1,200</s> — save ₹601 today.</p><div class="made-by">Designed & built by <b>Code Crackers</b><br>Company: <b>Hot Tin</b></div></div>
+        <form id="orderForm" class="order-form">
+          <label>Name<input required id="customerName" placeholder="Your name"></label>
+          <label>Phone<input required id="customerPhone" type="tel" placeholder="10-digit mobile number"></label>
+          <label>Delivery address<textarea required id="customerAddress" rows="3" placeholder="Your delivery address"></textarea></label>
+          <button class="primary-btn full" type="submit">Continue to payment ₹599 <span>→</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="paymentModal" class="modal">
+    <div class="modal-backdrop" onclick="closePayment()"></div>
+    <div class="modal-box">
+      <button class="close" onclick="closePayment()">×</button>
+      <span class="eyebrow">UPI PAYMENT</span><h2>Pay <span>₹599</span></h2>
+      <p>Scan the QR with any UPI app to place your order.</p>
+      <div class="qr-wrap"><img src="payment-qr-599.png" alt="UPI payment QR code"></div>
+      <div class="payment-amount"><small>EXACT AMOUNT REQUIRED</small><strong>₹599</strong></div>
+      <div class="upi-note">This QR requests exactly ₹599 in your UPI app.</div>
+      <label class="utr-label">UTR / Transaction Number
+        <input id="utrNumber" class="utr-input" required inputmode="numeric" placeholder="Enter UTR number after payment">
+      </label>
+      <div class="payment-warning">Only <b>₹599</b> payment is accepted. Order dispatch happens after UTR verification.</div><button id="paidBtn" class="primary-btn full">Submit payment details <span>✓</span></button>
+      <small class="demo-note">Demo checkout: order details are saved in this browser for the Admin page.</small>
+    </div>
+  </div>
+
+  <div id="successToast" class="toast">✓ Order received! Check the Admin page.</div>
+  <footer><span>HOT TIN</span><span>Food Heater • Code Crackers</span><a href="admin.html">Admin Dashboard →</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
