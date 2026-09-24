@@ -1,123 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hot Tin — Food Heater</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff4b1f">
+<title>HOT TIN — 3D Custom Food Heater</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="ambient ambient-1"></div><div class="ambient ambient-2"></div>
+<body data-theme="fire">
+<div class="noise"></div>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
 
-  <header class="nav">
-    <a class="brand" href="#home"><span class="brand-mark">HT</span><span>HOT <b>TIN</b></span></a>
-    <nav>
-      <a href="#features">Benefits</a>
-      <a href="#product">Product</a>
-      <a href="#how">How it works</a>
-      <a class="admin-link" href="admin.html">Admin</a>
-    </nav>
-    <button class="nav-cta" onclick="scrollToOrder()">Order ₹599</button>
-  </header>
+<header class="nav">
+  <a class="brand" href="#home" aria-label="Hot Tin home"><img src="hot-tin-logo.png" alt="Hot Tin logo"><span>HOT <b>TIN</b></span></a>
+  <nav aria-label="Main navigation">
+    <a href="#features">Features</a><a href="#customize">Customize</a><a href="#order">Order</a>
+  </nav>
+  <a class="wa-mini" href="https://wa.me/918925460624?text=Hi%20Hot%20Tin%2C%20I%20have%20a%20query%20about%20the%20Food%20Heater." target="_blank" rel="noopener">WhatsApp</a>
+</header>
 
-  <main id="home">
-    <section class="hero">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="pulse-dot"></span> SMART FOOD HEATING • BY CODE CRACKERS</div>
-        <h1>Warm food.<br><em>Right temperature.</em></h1>
-        <p class="hero-text">Meet <strong>Food Heater</strong> by <strong>Hot Tin</strong> — a simple, modern way to keep your meals warm and ready whenever you are.</p>
-        <div class="price-row">
-          <div><span class="old-price">₹1,200</span><span class="sale-price">₹599</span></div>
-          <span class="save-badge">50% OFF</span>
-        </div>
-        <div class="hero-actions">
-          <button class="primary-btn" onclick="scrollToOrder()">Get Food Heater <span>→</span></button>
-          <a class="ghost-btn" href="#features">Explore benefits</a>
-        </div>
-        <div class="trust-row"><span>✓ Simple</span><span>✓ Temperature care</span><span>✓ Compact</span></div>
-      </div>
-
-      <div class="hero-product reveal">
-        <div class="product-glow"></div>
-        <div class="heater">
-          <div class="heater-top"><div class="heater-logo">HOT<br><b>TIN</b></div><div class="heat-lines">≈ ≈ ≈</div></div>
-          <div class="heater-lid"></div>
-          <div class="heater-body"><div class="display">WARM</div><div class="led"></div></div>
-          <div class="heater-base"></div>
-        </div>
-        <div class="floating-card card-temp"><span>🌡</span><div><b>Stable heat</b><small>Maintains temperature</small></div></div>
-        <div class="floating-card card-ready"><span>✓</span><div><b>Meal ready</b><small>Warm when you need it</small></div></div>
-      </div>
-    </section>
-
-    <section id="features" class="section">
-      <div class="section-heading reveal"><span class="eyebrow">WHY HOT TIN</span><h2>Small box.<br><span>Big comfort.</span></h2><p>Designed to make everyday meals easier, warmer and more convenient.</p></div>
-      <div class="feature-grid">
-        <article class="feature reveal"><div class="icon">🌡️</div><h3>Maintains same temperature</h3><p>Helps keep your food at a comfortable, consistent serving temperature.</p></article>
-        <article class="feature reveal"><div class="icon">🔥</div><h3>Warm food, whenever</h3><p>Enjoy your meal warm instead of letting it sit cold while you work or study.</p></article>
-        <article class="feature reveal"><div class="icon">🧊</div><h3>Cool to handle</h3><p>A clean, compact design made for simple everyday handling and storage.</p></article>
-        <article class="feature reveal"><div class="icon">⚡</div><h3>Simple operation</h3><p>No complicated controls — place your meal, power it and let Hot Tin do the work.</p></article>
-      </div>
-    </section>
-
-    <section id="product" class="product-section">
-      <div class="product-info reveal">
-        <span class="eyebrow">THE HOT TIN FOOD HEATER</span>
-        <h2>Made for your<br><span>everyday meal.</span></h2>
-        <p>Whether you're at college, in the office or working from home, Hot Tin keeps your food ready for the moment you are.</p>
-        <ul class="check-list"><li>Temperature-maintaining heating system</li><li>Minimal black & red design</li><li>Easy-to-use food compartment</li><li>Built for everyday convenience</li></ul>
-      </div>
-      <div class="spec-card reveal">
-        <div class="spec-top"><span>HOT TIN</span><span>01</span></div>
-        <div class="mini-heater"><div class="mini-lid"></div><div class="mini-box"><div class="mini-screen">HOT</div></div></div>
-        <div class="spec-bottom"><div><small>ORIGINAL</small><b>FOOD HEATER</b></div><strong>₹599</strong></div>
-      </div>
-    </section>
-
-    <section id="how" class="section how-section">
-      <div class="section-heading reveal"><span class="eyebrow">3 EASY STEPS</span><h2>Heat. Wait.<br><span>Enjoy.</span></h2></div>
-      <div class="steps">
-        <div class="step reveal"><b>01</b><div class="step-line"></div><h3>Place your food</h3><p>Put your meal safely inside the heater compartment.</p></div>
-        <div class="step reveal"><b>02</b><div class="step-line"></div><h3>Start heating</h3><p>Turn on the heater and let it maintain a comfortable temperature.</p></div>
-        <div class="step reveal"><b>03</b><div class="step-line"></div><h3>Enjoy your meal</h3><p>Your warm meal is ready when you are.</p></div>
-      </div>
-    </section>
-
-    <section id="order" class="order-section">
-      <div class="order-card reveal">
-        <div class="order-copy"><span class="eyebrow">LIMITED INTRO PRICE</span><h2>Food Heater<br><span>₹599</span></h2><p>Regular price <s>₹1,200</s> — save ₹601 today.</p><div class="made-by">Designed & built by <b>Code Crackers</b><br>Company: <b>Hot Tin</b></div></div>
-        <form id="orderForm" class="order-form">
-          <label>Name<input required id="customerName" placeholder="Your name"></label>
-          <label>Phone<input required id="customerPhone" type="tel" placeholder="10-digit mobile number"></label>
-          <label>Delivery address<textarea required id="customerAddress" rows="3" placeholder="Your delivery address"></textarea></label>
-          <button class="primary-btn full" type="submit">Continue to payment ₹599 <span>→</span></button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <div id="paymentModal" class="modal">
-    <div class="modal-backdrop" onclick="closePayment()"></div>
-    <div class="modal-box">
-      <button class="close" onclick="closePayment()">×</button>
-      <span class="eyebrow">UPI PAYMENT</span><h2>Pay <span>₹599</span></h2>
-      <p>Scan the QR with any UPI app to place your order.</p>
-      <div class="qr-wrap"><img src="payment-qr-599.png" alt="UPI payment QR code"></div>
-      <div class="payment-amount"><small>EXACT AMOUNT REQUIRED</small><strong>₹599</strong></div>
-      <div class="upi-note">This QR requests exactly ₹599 in your UPI app.</div>
-      <label class="utr-label">UTR / Transaction Number
-        <input id="utrNumber" class="utr-input" required inputmode="numeric" placeholder="Enter UTR number after payment">
-      </label>
-      <div class="payment-warning">Only <b>₹599</b> payment is accepted. Order dispatch happens after UTR verification.</div><button id="paidBtn" class="primary-btn full">Submit payment details <span>✓</span></button>
-      <small class="demo-note">Demo checkout: order details are saved in this browser for the Admin page.</small>
-    </div>
+<main id="home">
+<section class="hero wrap">
+  <div class="hero-copy reveal">
+    <div class="eyebrow"><span class="live-dot"></span> CUSTOM 3D FOOD HEATER • CODE CRACKERS</div>
+    <h1>Build your own<br><span>Hot Tin.</span></h1>
+    <p>Choose the box colour, size and front name. Drag the product to see it from every angle — your changes update live on the entire product.</p>
+    <div class="hero-price"><div><small>STARTING PRICE</small><strong id="heroPrice">₹599</strong></div><span id="heroSize">STANDARD</span></div>
+    <div class="actions"><button class="btn primary" onclick="scrollToCustomize()">Customize now <i>↘</i></button><a class="btn secondary" href="#order">Buy ₹599</a></div>
+    <div class="trust"><span>✦ 360° view</span><span>✦ Live customization</span><span>✦ WhatsApp support</span></div>
   </div>
 
-  <div id="successToast" class="toast">✓ Order received! Check the Admin page.</div>
-  <footer><span>HOT TIN</span><span>Food Heater • Code Crackers</span><a href="admin.html">Admin Dashboard →</a></footer>
-  <script src="script.js"></script>
+  <div class="hero-product reveal">
+    <div class="stage-glow"></div>
+    <div class="hero-stage">
+      <div class="product-3d hero-model" id="heroModel" aria-label="3D Hot Tin product preview">
+        <div class="face front"><div class="front-art"><span class="hot-mark">HOT TIN</span><span class="custom-front">YOUR NAME</span></div></div>
+        <div class="face back"><span>HOT TIN</span></div>
+        <div class="face right"><span>HOT TIN</span></div>
+        <div class="face left"><span>FOOD HEATER</span></div>
+        <div class="face top"><span class="top-label">HOT TIN</span></div>
+        <div class="face bottom"></div>
+      </div>
+    </div>
+    <div class="drag-hint">↔ Drag to rotate <span>•</span> 360°</div>
+    <div class="floating-card fc-price"><b id="heroFloatPrice">₹599</b><small>your build</small></div>
+    <div class="floating-card fc-build"><b id="heroFloatColor">Fire Red</b><small id="heroFloatSize">Standard</small></div>
+  </div>
+</section>
+
+<section id="features" class="section wrap">
+  <div class="section-head reveal"><div><span class="eyebrow">WHAT CHANGES LIVE</span><h2>Not just a colour.<br><span>The product changes.</span></h2></div><p>Every option is connected to the same 3D product. Change one setting and the front, side, top, size and order summary update together.</p></div>
+  <div class="feature-grid">
+    <article class="feature reveal"><span>01</span><div class="ico">◈</div><h3>Product colour</h3><p>Switch the actual 3D box colour — not just the website theme.</p></article>
+    <article class="feature reveal"><span>02</span><div class="ico">↻</div><h3>360° product view</h3><p>Drag left or right to inspect the wooden box from every side.</p></article>
+    <article class="feature reveal"><span>03</span><div class="ico">↕</div><h3>Size selection</h3><p>Pick Standard, Medium or Large and watch the model scale instantly.</p></article>
+    <article class="feature reveal"><span>04</span><div class="ico">✎</div><h3>Personal name</h3><p>Add your own name or text and see it appear on the front panel.</p></article>
+  </div>
+</section>
+
+<section id="customize" class="customizer section wrap">
+  <div class="section-head reveal"><div><span class="eyebrow">LIVE PRODUCT CUSTOMIZER</span><h2>Design the<br><span>wooden box.</span></h2></div><p>Use the controls. The product on the left is the same product that will be ordered. Try dragging it too.</p></div>
+  <div class="customizer-shell reveal">
+    <div class="viewer-panel">
+      <div class="viewer-top"><span class="live-badge"><i></i> LIVE PREVIEW</span><span>Drag • 360°</span></div>
+      <div class="viewer-stage" id="viewerStage">
+        <div class="product-3d" id="productModel" aria-label="Interactive 3D customized Hot Tin product">
+          <div class="face front"><div class="front-art"><span class="hot-mark">HOT TIN</span><span class="custom-front" id="frontName">YOUR NAME</span></div></div>
+          <div class="face back"><span id="backName">HOT TIN</span></div>
+          <div class="face right"><span id="rightName">HOT TIN</span></div>
+          <div class="face left"><span>FOOD HEATER</span></div>
+          <div class="face top"><span class="top-label" id="topName">HOT TIN</span></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+      <div class="viewer-controls"><button id="spinToggle" class="ghost-btn" type="button">⏸ Pause spin</button><button id="resetView" class="ghost-btn" type="button">↺ Reset view</button></div>
+    </div>
+
+    <aside class="controls-panel">
+      <div class="control-block">
+        <div class="control-title"><div><small>01</small><b>Product colour</b></div><span id="selectedColorName">Fire Red</span></div>
+        <div class="color-grid">
+          <button class="color-option active" data-color="fire" style="--swatch:#e84928"><i></i><span>Fire Red</span></button>
+          <button class="color-option" data-color="black" style="--swatch:#161719"><i></i><span>Matte Black</span></button>
+          <button class="color-option" data-color="cream" style="--swatch:#e8d8bd"><i></i><span>Warm Cream</span></button>
+          <button class="color-option" data-color="blue" style="--swatch:#1d63c9"><i></i><span>Royal Blue</span></button>
+          <button class="color-option" data-color="green" style="--swatch:#2e6b49"><i></i><span>Forest Green</span></button>
+          <button class="color-option" data-color="purple" style="--swatch:#7138a8"><i></i><span>Deep Purple</span></button>
+        </div>
+      </div>
+
+      <div class="control-block">
+        <div class="control-title"><div><small>02</small><b>Choose size</b></div><span id="selectedSizeName">Standard</span></div>
+        <div class="size-grid">
+          <button class="size-option active" data-size="standard" data-price="599" data-scale="1"><b>Standard</b><small>20 × 15 × 8 cm</small><strong>₹599</strong></button>
+          <button class="size-option" data-size="medium" data-price="699" data-scale="1.12"><b>Medium</b><small>24 × 18 × 9 cm</small><strong>₹699</strong></button>
+          <button class="size-option" data-size="large" data-price="799" data-scale="1.24"><b>Large</b><small>28 × 21 × 10 cm</small><strong>₹799</strong></button>
+        </div>
+      </div>
+
+      <div class="control-block">
+        <div class="control-title"><div><small>03</small><b>Add your name / text</b></div><span id="charCount">0/18</span></div>
+        <div class="name-input-wrap"><input id="customText" maxlength="18" placeholder="e.g. GUNAAL" autocomplete="off"><button id="clearText" type="button" aria-label="Clear name">×</button></div>
+        <div class="quick-names"><button type="button" data-text="GUNAAL">GUNAAL</button><button type="button" data-text="HOT TIN">HOT TIN</button><button type="button" data-text="CODE CRACKERS">CODE CRACKERS</button></div>
+      </div>
+
+      <div class="build-summary">
+        <div><small>YOUR CUSTOM BUILD</small><b id="summaryTitle">Fire Red • Standard</b><span id="summaryText">Front text: YOUR NAME</span></div>
+        <strong id="summaryPrice">₹599</strong>
+      </div>
+      <button class="btn primary full big-buy" type="button" onclick="buyCustomized()">Continue with this design <i>→</i></button>
+      <a class="query-box" href="https://wa.me/918925460624?text=Hi%20Hot%20Tin%2C%20I%20have%20a%20customization%20query%20about%20the%20Food%20Heater." target="_blank" rel="noopener"><span>💬</span><div><b>Need a custom option?</b><small>WhatsApp +91 89254 60624</small></div><strong>↗</strong></a>
+    </aside>
+  </div>
+</section>
+
+<section id="product" class="product wrap">
+  <div class="product-showcase reveal">
+    <div class="mini-stage"><div class="product-3d mini-model" id="miniModel">
+      <div class="face front"><div class="front-art"><span class="hot-mark">HOT TIN</span><span class="custom-front">YOUR NAME</span></div></div><div class="face back"><span>HOT TIN</span></div><div class="face right"><span>HOT TIN</span></div><div class="face left"><span>FOOD HEATER</span></div><div class="face top"><span class="top-label">HOT TIN</span></div><div class="face bottom"></div>
+    </div></div>
+    <div class="showcase-caption"><span>WOOD BOX ONLY</span><b>Clean • Custom • Rotatable</b></div>
+  </div>
+  <div class="product-copy reveal"><span class="eyebrow">THE PRODUCT</span><h2>One box.<br><span>Your design.</span></h2><p>This section intentionally shows only the wooden food-heater box, without the original room/background photo. That keeps the product clean and makes colour, size and personalisation obvious.</p>
+    <div class="specs"><div><small>PRICE</small><b id="productPrice">₹599</b></div><div><small>SIZE</small><b id="productSize">STANDARD</b></div><div><small>TEXT</small><b id="productText">YOUR NAME</b></div></div>
+    <a class="wa-box" href="https://wa.me/918925460624?text=Hi%20Hot%20Tin%2C%20I%20want%20to%20know%20more%20about%20the%20custom%20Food%20Heater." target="_blank" rel="noopener"><span>💬</span><div><b>Have a query?</b><small>WhatsApp +91 89254 60624</small></div><strong>→</strong></a>
+  </div>
+</section>
+
+<section id="order" class="checkout wrap">
+ <div class="checkout-copy reveal"><span class="eyebrow">YOUR DESIGN IS READY</span><h2>Order your<br><span>custom Hot Tin.</span></h2><p>Your selected colour, size and front text will be saved with the order. Choose a payment option after entering your details.</p><div class="secure-line">🔒 UPI supported • ₹599 starting price • WhatsApp support</div></div>
+ <form id="orderForm" class="checkout-form reveal">
+   <div class="selected-build-card"><span>SELECTED DESIGN</span><b id="orderBuild">Fire Red • Standard</b><small id="orderBuildText">Front text: YOUR NAME • ₹599</small></div>
+   <label>Name<input id="customerName" required placeholder="Your name"></label>
+   <label>Phone<input id="customerPhone" required inputmode="numeric" maxlength="10" placeholder="10-digit mobile number"></label>
+   <label>Delivery address<textarea id="customerAddress" required rows="3" placeholder="Full delivery address"></textarea></label>
+   <button class="btn primary full" type="submit">Continue to payment <strong id="orderButtonPrice">₹599</strong> <i>→</i></button>
+ </form>
+</section>
+</main>
+
+<div id="paymentModal" class="modal" aria-hidden="true"><div class="modal-bg" onclick="closePayment()"></div><div class="modal-box">
+ <button class="close" onclick="closePayment()" aria-label="Close">×</button>
+ <div class="payment-head"><span class="eyebrow">PAYMENT</span><h2>Complete your order<br><span id="paymentPrice">₹599</span></h2><p>Choose any UPI option. The amount is automatically taken from your selected product size.</p></div>
+ <div class="pay-grid">
+   <button class="pay-app gpay" onclick="payApp('gpay')"><span>G</span><div><b>Google Pay</b><small>Open GPay</small></div><strong>↗</strong></button>
+   <button class="pay-app phonepe" onclick="payApp('phonepe')"><span>पे</span><div><b>PhonePe</b><small>Open PhonePe</small></div><strong>↗</strong></button>
+   <button class="pay-app paytm" onclick="payApp('paytm')"><span>₹</span><div><b>Paytm</b><small>Open Paytm</small></div><strong>↗</strong></button>
+   <button class="pay-app upi" onclick="payApp('upi')"><span>UPI</span><div><b>Other UPI app</b><small>Choose installed app</small></div><strong>↗</strong></button>
+ </div>
+ <div class="qr-section"><div><b>Or scan QR</b><small id="qrAmount">Exact amount: ₹599</small></div><img src="payment-qr-599.png" alt="Hot Tin UPI QR"></div>
+ <div class="upi-id"><span>UPI ID</span><b>gunaalrajan22-1@okicici</b><button onclick="copyUPI()">Copy</button></div>
+ <label class="utr">After payment, enter UTR / Transaction ID<input id="utrNumber" inputmode="numeric" placeholder="e.g. 123456789012"></label>
+ <button id="paidBtn" class="btn primary full">Submit payment details <i>✓</i></button>
+ <p class="pay-note">Payment verification is done by admin using the submitted UTR before dispatch.</p>
+ </div></div>
+<div id="toast" class="toast"></div>
+<footer><span>HOT TIN</span><span>Custom Food Heater • Code Crackers</span><a href="https://wa.me/918925460624?text=Hi%20Hot%20Tin%2C%20I%20have%20a%20query." target="_blank" rel="noopener">WhatsApp • +91 89254 60624</a><a href="admin.html">Admin →</a></footer>
+<script src="script.js"></script>
 </body>
 </html>
